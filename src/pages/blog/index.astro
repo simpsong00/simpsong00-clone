@@ -1,0 +1,26 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+---
+<Base title="Blog" description="Updates and research from The Quotient Series">
+  <section class="section">
+    <h1>The Journey Blog</h1>
+    <p>
+      The Quotient Series journey, behind-the-scenes research, technology insights, and travel photography.
+    </p>
+    <div class="blog-grid">
+      {posts.map((post) => (
+        <article class="blog-card">
+          <p class="meta">{new Date(post.data.pubDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description || ""}</p>
+          <a class="button secondary" href={`/blog/${post.slug}`}>Read post</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+
+const { title = "The Quotient Series", description = "", hero = false } = Astro.props;
+const pageTitle = title ? `${title} | The Quotient Series` : "The Quotient Series";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="/">The Quotient Series</a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/books">Books</a>
+        <a href="/blog">Blog</a>
+        <a href="/technology">Technology</a>
+        <a href="/locations">Locations</a>
+        <a href="/author">Author</a>
+        <a href="/the-game">The Game</a>
+      </nav>
+    </header>
+    <main class={hero ? "" : "section"}>
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>The Quotient Series</strong>
+          <p>Techno-thriller fiction grounded in real science, real locations, and the future of quantum technology.</p>
+        </div>
+        <div>
+          <p>Reach out on social or explore the latest updates in the blog.</p>
+          <a class="button secondary" href="/blog">Visit the blog</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
