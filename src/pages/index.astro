@@ -1,5 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL;
+const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 ---
 <Base title="Home" description="The Quotient Series by Greg Simpson" hero={true}>
   <section class="hero">
@@ -7,19 +9,15 @@ import Base from "../layouts/Base.astro";
       <div class="hero-tag">Techno-Thriller</div>
       <h1>The Quotient Series</h1>
       <p>
-        Welcome to the home of The Quotient Series. This series centers on Kara McClellan, a scientist and a great
-        adventurer. She works on leading edge technology in a world where risk takes her on life-or-death missions around
-        the globe.
+        Welcome to the home of The Quotient Series — a techno-thriller series that blends espionage, quantum computing,
+        and global stakes.
       </p>
       <p>
-        This series of books and stories will bring you to amazing real-world locations and involve the most modern
-        technologies and current events. You will be entertained and educated with real science! The story will entertain
-        you and the science will be accurate. Kara and her team use technology and science to overcome awesome challenges
-        that will keep you turning the pages.
+        Join Jack, Sarah, and the Quotient team as they race around the world to save humanity.
       </p>
       <div class="book-actions">
-        <a class="button" href="https://www.simpsong00.com/the-quotient-covenant.html">Read The Quotient Covenant</a>
-        <a class="button secondary" href="/books">See all books</a>
+        <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Read The Quantum Contingent</a>
+        <a class="button secondary" href={withBase("books")}>See all books</a>
       </div>
     </div>
     <div class="hero-art" aria-label="The Quotient Series"></div>
@@ -29,21 +27,19 @@ import Base from "../layouts/Base.astro";
     <h2>Available Now</h2>
     <div class="grid">
       <article class="card book-card">
-        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/tqc-front-hd_orig.jpg" alt="The Quotient Covenant book cover" />
+        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/tqc-front-hd_orig.jpg" alt="The Quantum Contingent book cover" />
         <div>
           <p class="meta">Book One</p>
-          <h3>The Quotient Covenant</h3>
+          <h3>The Quantum Contingent</h3>
           <p>
-            A silicon chip with 50 Qubits, 1.125 quadrillion computations at the same time, and it is lost. The team of
-            scientists that produced the chip are in a race against time to retrieve it.
+            A fast-paced techno-thriller with espionage, quantum computing, and global stakes.
           </p>
           <p>
-            Can they find the chip before it falls into the wrong hands? Or will its immense power be used to destroy the
-            world?
+            Pop-culture energy, richly detailed locations, and today’s technologies extrapolated for tomorrow.
           </p>
           <div class="book-actions">
-            <a class="button" href="https://www.simpsong00.com/the-quotient-covenant.html">Book details</a>
-            <a class="button secondary" href="https://www.simpsong00.com/author.html">Meet the author</a>
+            <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Book details</a>
+            <a class="button secondary" href={withBase("author")}>Meet the author</a>
           </div>
         </div>
       </article>
@@ -53,12 +49,11 @@ import Base from "../layouts/Base.astro";
           <p class="meta">Book Two</p>
           <h3>Quantum Time</h3>
           <p>
-            Kara and her team return to stop a new quantum threat. The story follows the continuing adventures of Kara
-            McClellan, the lead scientist in the series, as she and her team attempt to save the world once again.
+            A gripping sequel that deepens the world of Quotient and the Quantum Contingent.
           </p>
           <div class="book-actions">
             <a class="button" href="https://www.simpsong00.com/quantum-time.html">Book details</a>
-            <a class="button secondary" href="/locations">Explore locations</a>
+            <a class="button secondary" href={withBase("locations")}>Explore locations</a>
           </div>
         </div>
       </article>
@@ -74,9 +69,9 @@ import Base from "../layouts/Base.astro";
         locations, and follow along on the author journey.
       </p>
       <div class="book-actions">
-        <a class="button" href="/technology">Technology</a>
-        <a class="button" href="/locations">Locations</a>
-        <a class="button secondary" href="/author">Author</a>
+        <a class="button" href={withBase("technology")}>Technology</a>
+        <a class="button" href={withBase("locations")}>Locations</a>
+        <a class="button secondary" href={withBase("author")}>Author</a>
       </div>
     </div>
   </section>

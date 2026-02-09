@@ -2,6 +2,8 @@
 import "../styles/global.css";
 
 const { title = "The Quotient Series", description = "", hero = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 const pageTitle = title ? `${title} | The Quotient Series` : "The Quotient Series";
 ---
 <!doctype html>
@@ -14,15 +16,15 @@ const pageTitle = title ? `${title} | The Quotient Series` : "The Quotient Serie
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="/">The Quotient Series</a>
+      <a class="brand" href={withBase("")}>The Quotient Series</a>
       <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/books">Books</a>
-        <a href="/blog">Blog</a>
-        <a href="/technology">Technology</a>
-        <a href="/locations">Locations</a>
-        <a href="/author">Author</a>
-        <a href="/the-game">The Game</a>
+        <a href={withBase("")}>Home</a>
+        <a href={withBase("books")}>Books</a>
+        <a href={withBase("blog")}>Blog</a>
+        <a href={withBase("technology")}>Technology</a>
+        <a href={withBase("locations")}>Locations</a>
+        <a href={withBase("author")}>Author</a>
+        <a href={withBase("the-game")}>The Game</a>
       </nav>
     </header>
     <main class={hero ? "" : "section"}>
@@ -36,7 +38,7 @@ const pageTitle = title ? `${title} | The Quotient Series` : "The Quotient Serie
         </div>
         <div>
           <p>Reach out on social or explore the latest updates in the blog.</p>
-          <a class="button secondary" href="/blog">Visit the blog</a>
+          <a class="button secondary" href={withBase("blog")}>Visit the blog</a>
         </div>
       </div>
     </footer>

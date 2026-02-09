@@ -1,5 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL;
+const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 ---
 <Base title="The Game" description="Interactive fiction set in The Quotient Series">
   <section class="section">
@@ -19,7 +21,7 @@ import Base from "../layouts/Base.astro";
     </p>
     <div class="book-actions">
       <a class="button" href="https://www.simpsong00.com/quotient-game">Launch the game</a>
-      <a class="button secondary" href="/blog">Read the blog</a>
+      <a class="button secondary" href={withBase("blog")}>Read the blog</a>
     </div>
   </section>
 </Base>
