@@ -13,7 +13,7 @@ Here are a collection of my photos that were from places in Quantum Time, or wer
 [![](https://www.simpsong00.com/images/uploads/weebly/img-6721jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/img-6721_orig.jpeg)
 [![](https://www.simpsong00.com/images/uploads/weebly/21-the-cowboyjpeg-2.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/21-the-cowboy_orig.jpeg)
 [![](https://www.simpsong00.com/images/uploads/weebly/africa-109jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/africa-109_orig.jpeg)
-[![](quotient-site /images/uploads/weebly/africa-116jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/africa-116_orig.jpeg)
+[![](https://www.simpsong00.com/images/uploads/weebly/africa-116jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/africa-116_orig.jpeg)
 [![](https://www.simpsong00.com/images/uploads/weebly/africa-978jpeg-2.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/africa-978_orig.jpeg)
 [![](https://www.simpsong00.com/images/uploads/weebly/africa-1025jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/africa-1025_orig.jpeg)
 [![](https://www.simpsong00.com/images/uploads/weebly/b-ridge-t-junior-year-5643jpeg.jpeg)](https://www.simpsong00.com/uploads/1/3/7/0/137005184/b-ridge-t-junior-year-5643_orig.jpeg)
