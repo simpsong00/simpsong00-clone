@@ -4,67 +4,50 @@ const base = import.meta.env.BASE_URL;
 const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 ---
 <Base title="Books" description="Books in The Quotient Series">
-  <section class="section">
+  <section class="section page-shell">
     <h1>Books</h1>
-    <p>
-      The Quotient Series combines real science with high-stakes adventure. Explore the books below for techno-thrillers
-      grounded in real-world locations and modern technology.
-    </p>
-  </section>
 
-  <section class="section tight">
-    <div class="grid">
-      <article class="card book-card">
-        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/tqc-front-hd_orig.jpg" alt="The Quantum Contingent cover" />
-        <div>
-          <p class="meta">Book One</p>
-          <h2>The Quantum Contingent</h2>
-          <p>
-            A globe-trotting techno-spy thriller with pop-culture references and its own Spotify playlist.
-          </p>
-          <p>
-            Set in richly detailed locations and built on today’s technologies extrapolated for tomorrow, including
-            cryptocurrency, drones, and rocket ships.
-          </p>
-          <div class="book-actions">
-            <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Book details</a>
-            <a class="button secondary" href={withBase("blog")}>Read the journey blog</a>
-          </div>
+    <article class="card book-card split-card">
+      <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/tqc-front-hd_orig.jpg" alt="The Quantum Contingent cover" />
+      <div>
+        <p class="meta">Book One</p>
+        <h2>The Quantum Contingent</h2>
+        <p>
+          A globe trotting techno-spy-thriller set in 2028 involving spies, cryptocurrency, rockets, drones, and quantum
+          computing.
+        </p>
+        <p>
+          The Quantum Contingent follows Jack, Sarah, and the team at Quotient as they battle to save humanity in this
+          pop-culture-infused adventure.
+        </p>
+        <div class="book-actions">
+          <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Learn more</a>
         </div>
-      </article>
-
-      <article class="card book-card">
-        <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/quantum-time-book-front_orig.jpg" alt="Quantum Time cover" />
-        <div>
-          <p class="meta">Book Two</p>
-          <h2>Quantum Time</h2>
-          <p>
-            Jack and Sarah return as a mysterious threat targets world leaders and pulls them back into action.
-          </p>
-          <p>
-            The story moves between 2028 and 2050, blending a fast-paced adventure with richly detailed locations and
-            tomorrow’s technology.
-          </p>
-          <div class="book-actions">
-            <a class="button" href="https://www.simpsong00.com/quantum-time.html">Book details</a>
-            <a class="button secondary" href={withBase("locations")}>Explore locations</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="card">
-      <h2>What’s Next</h2>
-      <p>
-        The series continues with new research, new locations, and the next story in development. Follow along in the
-        blog for updates on writing progress, technology research, and travel inspiration.
-      </p>
-      <div class="book-actions">
-        <a class="button" href={withBase("blog")}>Visit the blog</a>
-        <a class="button secondary" href={withBase("author")}>About the author</a>
       </div>
+    </article>
+
+    <article class="card book-card split-card">
+      <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/quantum-time-book-front_orig.jpg" alt="Quantum Time cover" />
+      <div>
+        <p class="meta">Book Two</p>
+        <h2>Quantum Time</h2>
+        <p>
+          Quantum Time is the sequel to The Quantum Contingent. A mysterious threat to world leaders in the years 2028
+          and 2050.
+        </p>
+        <p>
+          The story is set in richly detailed locations around the world and is infused with technology extrapolated from
+          present-day innovations.
+        </p>
+        <div class="book-actions">
+          <a class="button" href="https://www.simpsong00.com/quantum-time.html">Learn more</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="book-actions">
+      <a class="button secondary" href={withBase("blog")}>Read the journey blog</a>
+      <a class="button secondary" href={withBase("technology")}>Technology topics</a>
     </div>
   </section>
 </Base>

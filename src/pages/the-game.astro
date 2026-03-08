@@ -1,27 +1,47 @@
 ---
 import Base from "../layouts/Base.astro";
-const base = import.meta.env.BASE_URL;
-const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 ---
-<Base title="The Game" description="Interactive fiction set in The Quotient Series">
-  <section class="section">
-    <h1>The Game</h1>
+<Base title="The Game" description="Quotient the Game interactive fiction">
+  <section class="section page-shell">
+    <h1>Quotient the Game!</h1>
     <p>
-      If you would like to immerse yourself in the story, then you can check out the text adventure game called The
-      Quotient Game! This is a fun and interactive way to experience the world of The Quotient Series.
+      Choose an option below to play, watch the full walkthrough, or open maps and resources.
     </p>
-    <p>
-      The game is called a text adventure. It will allow you to experience the story in a new way. You can make choices
-      that will affect the outcome of the story. You will be able to explore the world of the series and interact with
-      characters.
-    </p>
-    <p>
-      I have written this game for fans of the series. It is designed to be played by anyone who enjoys interactive
-      fiction and sci-fi adventure. Give it a try and let me know what you think.
-    </p>
+
     <div class="book-actions">
-      <a class="button" href="https://www.simpsong00.com/quotient-game">Launch the game</a>
-      <a class="button secondary" href={withBase("blog")}>Read the blog</a>
+      <a class="button" href="https://simpsong00.github.io/quotient-game/">Play the game</a>
+      <a class="button secondary" href="https://intfiction.org/t/quotient-the-game/72965">Watch the walkthrough</a>
+      <a class="button secondary" href="https://simpsong00.github.io/quotient-game/maps/quotient-game-map-no-spoilers.pdf">Spoiler-free map (PDF)</a>
     </div>
+
+    <p>
+      Quotient, the Game is an interactive fiction game in the genre of Zork. You embark on a secret mission starting at
+      Quotient HQ. You can meet the characters, fly the Quotient Jet, or even take a Rocket to TARDIS.
+    </p>
+    <p>
+      In the tradition of the books' Spotify playlists, the game includes a song for each room. Type <code>song</code> in
+      the game to get the current room song, or type <code>playlist</code> to see your custom playlist based on rooms you
+      have visited.
+    </p>
+
+    <h2>If You Are New to Interactive Fiction</h2>
+    <p>
+      Interactive fiction is text based. You move with commands like <code>north</code>, <code>south</code>,
+      <code>east</code>, <code>west</code> (or <code>n</code>, <code>s</code>, <code>e</code>, <code>w</code>), and solve
+      puzzles by interacting with items and characters.
+    </p>
+    <ul class="list-grid">
+      <li><code>examine [item/person]</code> or <code>x [item/person]</code></li>
+      <li><code>take [item]</code></li>
+      <li><code>inventory</code></li>
+      <li><code>look at [item]</code></li>
+      <li><code>enter</code> / <code>exit</code></li>
+      <li><code>fly to [location]</code></li>
+      <li><code>switch on [item]</code> / <code>switch off [item]</code></li>
+      <li><code>talk to [person]</code></li>
+      <li><code>unlock [item] with [item]</code></li>
+      <li><code>type [code] on [item]</code></li>
+      <li><code>help</code>, <code>save</code>, <code>restore</code></li>
+    </ul>
   </section>
 </Base>

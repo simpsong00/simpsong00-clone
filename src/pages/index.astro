@@ -4,75 +4,49 @@ const base = import.meta.env.BASE_URL;
 const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
 ---
 <Base title="Home" description="The Quotient Series by Greg Simpson" hero={true}>
-  <section class="hero">
+  <section class="hero hero-clean">
     <div class="hero-card">
-      <div class="hero-tag">Techno-Thriller</div>
       <h1>The Quotient Series</h1>
       <p>
-        Welcome to the home of The Quotient Series — a techno-thriller series that blends espionage, quantum computing,
-        and global stakes.
+        Welcome to the home of <em>The Quotient Series</em>, by author Greg Simpson.
       </p>
       <p>
-        Join Jack, Sarah, and the Quotient team as they race around the world to save humanity.
+        This is where you can learn all about my books, <em>The Quantum Contingent</em> and <em>Quantum Time</em>, along
+        with the places and technology that inspired them.
       </p>
       <div class="book-actions">
-        <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Read The Quantum Contingent</a>
-        <a class="button secondary" href={withBase("books")}>See all books</a>
+        <a class="button" href={withBase("books")}>View books</a>
+        <a class="button secondary" href={withBase("blog")}>The journey blog</a>
       </div>
     </div>
     <div class="hero-art" aria-label="The Quotient Series"></div>
   </section>
 
   <section class="section">
-    <h2>Available Now</h2>
-    <div class="grid">
+    <h2>Books</h2>
+    <div class="grid two-up">
       <article class="card book-card">
         <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/tqc-front-hd_orig.jpg" alt="The Quantum Contingent book cover" />
         <div>
-          <p class="meta">Book One</p>
           <h3>The Quantum Contingent</h3>
           <p>
-            A fast-paced techno-thriller with espionage, quantum computing, and global stakes.
+            A globe trotting techno-spy-thriller set in 2028 involving spies, cryptocurrency, rockets, drones, and quantum
+            computing.
           </p>
-          <p>
-            Pop-culture energy, richly detailed locations, and today’s technologies extrapolated for tomorrow.
-          </p>
-          <div class="book-actions">
-            <a class="button" href="https://www.simpsong00.com/the-quantum-contingent.html">Book details</a>
-            <a class="button secondary" href={withBase("author")}>Meet the author</a>
-          </div>
+          <a class="button secondary" href="https://www.simpsong00.com/the-quantum-contingent.html">Learn more</a>
         </div>
       </article>
+
       <article class="card book-card">
         <img src="https://www.simpsong00.com/uploads/1/3/7/0/137005184/quantum-time-book-front_orig.jpg" alt="Quantum Time book cover" />
         <div>
-          <p class="meta">Book Two</p>
           <h3>Quantum Time</h3>
           <p>
-            A gripping sequel that deepens the world of Quotient and the Quantum Contingent.
+            The sequel to The Quantum Contingent. A mysterious threat to world leaders in the years 2028 and 2050.
           </p>
-          <div class="book-actions">
-            <a class="button" href="https://www.simpsong00.com/quantum-time.html">Book details</a>
-            <a class="button secondary" href={withBase("locations")}>Explore locations</a>
-          </div>
+          <a class="button secondary" href="https://www.simpsong00.com/quantum-time.html">Learn more</a>
         </div>
       </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="card">
-      <h2>Explore the World of The Quotient Series</h2>
-      <p>
-        As a technologist, adventurer, and traveler, I have taken the inspiration from real life experiences and combined
-        it with the world of science to bring you compelling adventure stories. Dig into the technology, visit the
-        locations, and follow along on the author journey.
-      </p>
-      <div class="book-actions">
-        <a class="button" href={withBase("technology")}>Technology</a>
-        <a class="button" href={withBase("locations")}>Locations</a>
-        <a class="button secondary" href={withBase("author")}>Author</a>
-      </div>
     </div>
   </section>
 </Base>
