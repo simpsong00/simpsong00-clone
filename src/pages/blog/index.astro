@@ -6,7 +6,11 @@ const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 const base = import.meta.env.BASE_URL;
-const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
+const withBase = (path = "") => {
+  const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const cleanPath = path.replace(/^\/+/, "");
+  return cleanPath ? `${cleanBase}/${cleanPath}` : `${cleanBase}/`;
+};
 ---
 <Base title="Blog" description="Updates and research from The Quotient Series">
   <section class="section">

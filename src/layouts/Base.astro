@@ -3,7 +3,11 @@ import "../styles/global.css";
 
 const { title = "The Quotient Series", description = "", hero = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const withBase = (path) => `${base}${path.replace(/^\//, "")}`;
+const withBase = (path = "") => {
+  const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const cleanPath = path.replace(/^\/+/, "");
+  return cleanPath ? `${cleanBase}/${cleanPath}` : `${cleanBase}/`;
+};
 const pageTitle = title ? `${title} | The Quotient Series` : "The Quotient Series";
 ---
 <!doctype html>
